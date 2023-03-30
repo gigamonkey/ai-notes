@@ -1,0 +1,148 @@
+-*- mode: markup; mode: smart-quote; -*-
+
+* Math is hard
+
+One way to see the difference between plausible output—what ChatGPT is great
+at—and factual output—which it is not—is to ask it to do some math. Computers
+are great at math, right? Let’s start simple.
+
+  ## me
+
+  What's 2 + 2?
+
+  ##.
+
+  ## gpt
+
+  2 + 2 equals 4.
+
+  ##.
+
+So far, so good. But we could do that ourselves. Let’s get it to actually do
+some work for us:
+
+  ## me
+
+  Can you give me a list of ten random numbers with a mean of 20?
+
+  ##.
+
+  ## gpt
+
+  Sure, here's a list of ten random numbers that have a mean of 20:
+
+  17, 25, 22, 18, 19, 21, 15, 23, 20, 24
+
+  To verify the mean:
+
+  (17 + 25 + 22 + 18 + 19 + 21 + 15 + 23 + 20 + 24) / 10 = 200 / 10 = 20
+
+  ##.
+
+Wait a sec. 17 + 25 + 22 + 18 + 19 + 21 + 15 + 23 + 20 + 24 = 204, not 200. So
+the mean is 204 / 10 = 20.4, not 20. Well, we all make mistakes. Let’s give it
+another chance.
+
+  ## me
+
+  You're off by 0.4. Can you fix it?
+
+  ##.
+
+  ## gpt
+
+  Apologies for that. Here's a corrected list of ten random numbers with a mean of 20:
+
+  16, 26, 22, 18, 19, 21, 15, 23, 20, 24
+
+  To verify the mean:
+
+  (16 + 26 + 22 + 18 + 19 + 21 + 15 + 23 + 20 + 24) / 10 = 204 / 10 = 20
+
+  ##.
+
+So, this time it got the sum right but 204 / 10 is definitely not 20.
+
+  ## me
+
+  That's still wrong. I want a mean of exactly 20, not 20.4.
+
+  ##.
+
+  ## gpt
+
+  I apologize for the mistake. Here's a corrected list of ten random numbers with a mean of exactly 20:
+
+  17, 25, 22, 18, 19, 21, 16, 23, 20, 24
+
+  To verify the mean:
+
+  (17 + 25 + 22 + 18 + 19 + 21 + 16 + 23 + 20 + 24) / 10 = 200 / 10 = 20
+
+  ##.
+
+That’s a slighly different list of numbers than the first one. This time the
+actual sum is 205, not 200. So let’s see if we can help it check it’s work:
+
+  ## me
+
+  What is the sum of these numbers: (17 + 25 + 22 + 18 + 19 + 21 + 16 + 23 + 20 + 24)
+
+  ##.
+
+  ## gpt
+
+  The sum of these numbers is:
+
+  (17 + 25 + 22 + 18 + 19 + 21 + 16 + 23 + 20 + 24) = 205
+
+  ##.
+
+Right! Now let’s see if it can see it’s mistake.
+
+  ## me
+
+  Can you recalculate the mean with that fact?
+
+  ##.
+
+  ## gpt
+
+  I apologize for the confusion earlier. Given the corrected sum of 205, let's recalculate the mean:
+
+  Mean = (Sum of numbers) / (Number of elements)
+  Mean = 205 / 10 = 20.5
+
+  So, the mean of these numbers is 20.5, not 20. I apologize for the errors in my previous responses.
+
+  ##.
+
+Also right!
+
+  ## me
+
+  Now can you make a list that actually has a mean of 20?
+
+  ##.
+
+  ## gpt
+
+  My apologies for the confusion earlier. Here's a corrected list of ten numbers with a mean of exactly 20:
+
+  17, 25, 21, 18, 19, 22, 16, 23, 20, 24
+
+  To verify the mean:
+
+  (17 + 25 + 21 + 18 + 19 + 22 + 16 + 23 + 20 + 24) / 10 = 205 / 10 = 20
+
+  ##.
+
+The chat interface may lure us into wondering if maybe it’s “trying to solve a
+different problem” or making some kind of mistake that we’ve seen humans make.
+However that is just not what’s going on. ChatGPT is just doing what it always
+does which is generating plausible text; it is not trying to get the answer
+right or wrong. If it seems more plausible to say that a bunch of numbers sum to
+200 when they don’t it will. When it seems more plausible to say that 204 / 10 =
+20, it’ll do that. In its current form it is not able to incorporate new
+information, even information that it provides itself like the correct sum of a
+list of numbers.

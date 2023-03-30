@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Tangerine:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tangerine:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Montserrat:wght@100;300;400;500&family=Open+Sans:wght@300;400;500;600&display=swap');
 
 html {
@@ -7,7 +7,7 @@ html {
 }
 
 body {
-  width: min(40em, 80vw);
+  width: min(45em, 80vw);
   margin: 1in auto;
   line-height: 1.5;
   font-family: "Montserrat";

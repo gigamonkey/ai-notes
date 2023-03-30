@@ -30,7 +30,7 @@ As a general rule of thumb nobody should take any factual statement emitted by
 GPT at face value. It could possibly be useful to generate a starting list of
 facts if you (or your students) were going to verify them via some other means.
 
-Remember when we worried that Wikipedia wasn’t reliable; it is the gold standard
+Remember when we worried that Wikipedia wasn’t reliable? It is the gold standard
 of human curated knowledge these days compared to the hallucinations of LLMs.
 
 ** How can I tell if writing is AI generated?
