@@ -3,8 +3,9 @@
 * Math is hard
 
 One way to see the difference between plausible output—what ChatGPT is great
-at—and factual output—which it is not—is to ask it to do some math. Computers
-are great at math, right? Let’s start simple.
+at—and factual output—which it is not—is to ask it to do some math. It’s easy to
+check math for factual accuracy and computers are great at math, right? Let’s
+start simple.
 
   ## me
 
@@ -19,7 +20,8 @@ are great at math, right? Let’s start simple.
   ##.
 
 So far, so good. But we could do that ourselves. Let’s get it to actually do
-some work for us:
+some work for us. (Hat tip to my friend Coda Hale who came up with this
+example.)
 
   ## me
 
@@ -137,7 +139,7 @@ Also right!
 
   ##.
 
-The chat interface may lure us into wondering if maybe it’s “trying to solve a
+The chat interface may lure us into wondering if ChatGPT is “trying to solve a
 different problem” or making some kind of mistake that we’ve seen humans make.
 However that is just not what’s going on. ChatGPT is just doing what it always
 does which is generating plausible text; it is not trying to get the answer

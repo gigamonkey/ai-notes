@@ -11,6 +11,8 @@ likely wrong.
 
   - [ChatGPT for teachers]
 
+  - [Math is hard]
+
   - [GPT recommend PCL]
 
   - [GPT reads the comics]
@@ -18,6 +20,8 @@ likely wrong.
   - [The Story of Mac]
 
 [ChatGPT for teachers] </ai/chat-gpt-for-teachers/>
+
+[Math is hard] </ai/math-is-hard/>
 
 [GPT recommend PCL] </ai/gpt-recommends-pcl/>
 
