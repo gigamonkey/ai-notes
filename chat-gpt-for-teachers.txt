@@ -56,7 +56,7 @@ with GPT-4 about a piece of text that I know I wrote.
 
 ** How does ChatGPT work?
 
-If read one thing (beyond this thing you’re reading now) about how to think
+If you read one thing (beyond this thing you’re reading now) about how to think
 about how ChatGPT works, you should read “[ChatGPT as a query engine on a giant
 corpus of text|query engine]”. If after reading that you want a more in-depth
 and technical explanation of how ChatGPT actually works you can read Stephen
