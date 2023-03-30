@@ -139,8 +139,12 @@ Also right!
 
   ##.
 
-The chat interface may lure us into wondering if ChatGPT is “trying to solve a
-different problem” or making some kind of mistake that we’ve seen humans make.
+It’s frankly kind of amazing that just based on predicting probable next words
+it can even come close to answering this question. And that, combined with the
+human-like chat interface, may lead us to think that it is doing some sort of
+math but maybe “trying to solve a different problem” or making some kind of
+mistake that we’ve seen humans make.
+
 However that is just not what’s going on. ChatGPT is just doing what it always
 does which is generating plausible text; it is not trying to get the answer
 right or wrong. If it seems more plausible to say that a bunch of numbers sum to
