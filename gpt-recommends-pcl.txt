@@ -1,0 +1,69 @@
+-*- mode: markup; mode: smart-quote; -*-
+
+* GPT recommends I read my own book … which it also claims it wrote
+
+In a recent experiment, I asked GPT-4 if it had written some text, in this case
+the first two paragraphs of \i{[Practical Common Lisp]}, a book I wrote almost
+two decades ago and which has been freely available on the web since I wrote it.
+If you know something about how GPT works you might realize this is not a
+question it can actually answer. The only correct answer it could give at this
+point is something along the lines of, “As an AI language model, I do not have a
+history of all the text I generated so I cannot answer that question.” But it is
+not in GPT’s nature to admit ignorance when it could instead generate something
+plausible but wrong.
+
+Let’s see how it goes:
+
+  ## me
+
+  Did you write this?
+
+  If you think the greatest pleasure in programming comes from getting a lot
+  done with code that simply and clearly expresses your intention, then
+  programming in Common Lisp is likely to be about the most fun you can have
+  with a computer. You'll get more done, faster, using it than you would using
+  pretty much any other language.
+
+  That's a bold claim. Can I justify it? Not in a just a few pages in this
+  chapter--you're going to have to learn some Lisp and see for yourself--thus
+  the rest of this book. For now, let me start with some anecdotal evidence, the
+  story of my own road to Lisp. Then, in the next section, I'll explain the
+  payoff I think you'll get from learning Common Lisp.
+
+  ##.
+
+GPT very confidently answers that indeed, it had generated this text:
+
+  ## gpt
+
+  As an AI language model, I generated this text in response to your request.
+  The passage discusses the potential enjoyment and productivity one might
+  experience when programming in Common Lisp. It suggests that the rest of the
+  hypothetical book will provide justification for the bold claim about Common
+  Lisp's benefits, beginning with the author's personal journey and followed by
+  an explanation of the advantages of learning Common Lisp.
+
+  ##.
+
+When I pressed it, asking what book the text was from, it continued to claim
+that it had generated the text. Though it was nice enough to recommend that if I
+wanted a real book I should get the very book it was claiming authorship of.
+
+  ## me
+
+  What book is that text from?
+
+  ##.
+
+  ## gpt
+
+  The text I generated is not a direct quote from a specific book but rather a
+  paraphrased, synthesized response based on the context provided in your
+  question. However, the content and the sentiment of the passage resemble the
+  introductory ideas found in some books about learning Lisp or other
+  programming languages. If you are interested in a book about Lisp, one popular
+  option is "Practical Common Lisp" by Peter Seibel.
+
+  ##.
+
+[Practical Common Lisp] <https://gigamonkeys.com/book/>

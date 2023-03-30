@@ -1,0 +1,105 @@
+-*- mode: markup; mode: smart-quote; -*-
+
+* GPT reads the comics
+
+I needed to generate some data for a test I was writing for my Intro to
+Programming class. So I asked GPT (3.5 originally) just to give me a list of
+fruits and their colors. It provided me with a great list which I started to
+paste into my code and convert to JSON when I realized, GPT should be able to do
+that for me. So I asked it to and it did a great job.
+
+Then I wanted to add some more attributes to my fruit data so I asked it this:
+
+  ## me
+
+  Do you know the XKCD comic that ranks fruits on a 2-dimensional graph of how
+  tasty they are vs how much trouble they are to eat?
+
+  ##.
+
+  ## oldgpt
+
+  Yes, I'm familiar with that XKCD comic! It's called "Fruit Collider" and was
+  published on August 10, 2011. In the comic, fruits are plotted on a
+  two-dimensional graph with tastiness on the x-axis and inconvenience
+  (difficulty to eat) on the y-axis. The fruits are then labeled and connected
+  by lines to show which ones are most similar in taste and inconvenience. The
+  comic is a humorous take on the subjectivity of taste and the trade-offs
+  between convenience and flavor when it comes to choosing what to eat.
+
+  You can find the comic on the XKCD website at the following URL:
+  [https://xkcd.com/937/]
+
+  Please note that the comic is intended for amusement and shouldn't be taken as
+  a definitive guide on the tastiness or difficulty of eating different fruits.
+
+  ##.
+
+Amazing. So I asked it to add some scores to my data:
+
+  ## me
+
+  Can you add tastiness and inconvenience rankings to the list of fruits above
+  based on that comic?
+
+  ##.
+
+  ## oldgpt
+
+  Sure, I can certainly give it a shot! Based on the Fruit Collider comic, I
+  would assign each fruit a tastiness score from 1 to 10 (with 10 being the
+  tastiest) and an inconvenience score from 1 to 10 (with 10 being the most
+  inconvenient to eat). Here's the updated list:
+
+  ##.
+
+And it did a pretty darn good job. Obviously it's just a comic so there are no
+exact numbers to check but it seemed to at least be directionally correct.
+
+However, then I decided to fact check the first part of the answer. Turns yout
+GPT was \i{not} all that familiar with the comic because “Fruit Collider” is not
+the name of the comic in question, nor was it published on August 10, 2011.
+
+The actual comic I was asking about, and which GPT did more or less describe, is
+called “Fuck Grapefruit” and was published on February 25, 2008 as
+[https://xkcd.com/388/]. “Fruit Collider” is a \i{different} XKCD comic
+published on January 31, 2018 as [https://xkcd.com/1949/]. And the comic GPT
+linked to is titled “TornadoGuard” and was published on August 12, 2011 and has
+nothing to do with fruit. Also the description wasn’t quite right: the fruits
+are labeled but they are not “connected by lines to show which ones are most
+similar in taste and inconvenience”.
+
+GPT-4 does a bit better, getting the number of the comic right, providing the
+right URL, and not hazarding a publication date.
+
+  ## me
+
+  Do you know the XKCD comic that ranks fruits on a 2-dimensional graph of how
+  tasty they are vs how much trouble they are to eat?
+
+  ##.
+
+  ## gpt
+
+  Yes, I'm familiar with the comic you're referring to. It's XKCD comic #388
+  titled "Fruits." The comic presents a humorous 2-dimensional graph that plots
+  various fruits based on how tasty they are against how much trouble they are
+  to eat. The fruits are scattered across the graph, and some are labeled with
+  funny annotations that provide additional context or humor.
+
+  You can view the comic here: [https://xkcd.com/388/]
+
+  Please note that the comic is intended for amusement and shouldn't be taken as
+  a definitive guide on the tastiness or difficulty of eating different fruits.
+
+  ##.
+
+It did however still get the title wrong, perhaps because it's not supposed to
+say “fuck” and it halucinated the bit about some fruits being “labeled with
+funny annotations that provide additional context or humor”.
+
+Overall, I was pretty impressed by it’s ability to do the thing I actually cared
+about, namely, generate a bunch of fake data loosely based on the XKDC comic.
+But the fact that almost every factual statement it made was wrong reminded me
+again how little you can rely on GPT as a source of facts that you are not able
+to independently verify.

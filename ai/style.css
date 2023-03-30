@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Tangerine:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Montserrat:wght@100;300;400;500&family=Open+Sans:wght@300;400;500;600&display=swap');
+
+html {
+  background: rgb(2,0,36);
+  background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+}
+
+body {
+  width: min(40em, 80vw);
+  margin: 1in auto;
+  line-height: 1.5;
+  font-family: "Montserrat";
+  background: #eef;
+  padding: 3em;
+  border: 1px solid #888;
+}
+
+h1, h2 {
+  font-family: "Alfa Slab One";
+  font-weight: 100;
+}
+
+header {
+  text-align: right;
+  font-size: 0.8rem;
+}
+
+footer {
+  margin-top: 2em;
+  font-size: 0.8rem;
+  font-style: italic;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline dotted;
+}
+
+div.epigram {
+  font-family: 'Tangerine', cursive;
+  font-size: 2rem;
+  line-height: 1;
+  text-align: center;
+}
+
+blockquote {
+  margin: 2em 1.5em;
+}
+
+blockquote > div {
+  color: rgb(236, 236, 241);
+  padding: 1.5em 1em;
+  font-family: Söhne,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif,Helvetica Neue,Arial,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+  display: grid;
+  grid-template-columns: 80px 1fr;
+}
+
+blockquote div img {
+  margin-left: 0.5em;
+}
+
+blockquote div.me img {
+  width: 40px;
+  height: 40px;
+}
+
+img.gpt-4-avatar {
+  background: black; !important
+  width: 34px;
+  height: 34px;
+  padding: 3px;
+}
+
+img.gpt-3-5-avatar {
+  background: rgb(25, 148, 108); !important
+  width: 34px;
+  height: 34px;
+  padding: 3px;
+}
+
+blockquote div div {
+  padding-right: 2em;
+}
+
+blockquote div div p:first-child {
+  margin-top: 0;
+}
+
+blockquote .me {
+  background: rgb(52, 53, 65);
+}
+
+blockquote .gpt {
+  background: rgb(68, 70, 84);
+  color: rgb(209, 213, 219);
+}
+
+blockquote .gpt a {
+  color: rgb(255, 255, 255);
+}

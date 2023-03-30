@@ -1,0 +1,5 @@
+https://platform.openai.com/ai-text-classifier
+https://rodneybrooks.com/what-will-transformers-transform/
+https://ryxcommar.com/2023/03/28/chatgpt-as-a-query-engine-on-a-giant-corpus-of-text/
+https://thegradient.pub/othello/
+https://writings.stephenwolfram.com/2023/02/what-is-chatgpt-doing-and-why-does-it-work/

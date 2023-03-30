@@ -1,0 +1,26 @@
+-*- mode: markup; mode: smart-quote; -*-
+
+## epigram
+
+If you predict the next most likely word, trained on the internet, it is most
+likely wrong.
+
+##.
+
+* AI Notes
+
+  - [ChatGPT for teachers]
+
+  - [GPT recommend PCL]
+
+  - [GPT reads the comics]
+
+  - [The Story of Mac]
+
+[ChatGPT for teachers] </ai/chat-gpt-for-teachers/>
+
+[GPT recommend PCL] </ai/gpt-recommends-pcl/>
+
+[GPT reads the comics] </ai/gpt-reads-the-comics/>
+
+[The Story of Mac] </ai/story-of-mac/>

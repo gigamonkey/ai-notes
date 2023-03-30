@@ -1,0 +1,70 @@
+-*- mode: markup; mode: smart-quote; -*-
+
+* The Story of Mac
+
+Let’s ask GPT-4 about a thing from my book \i{[Practical Common Lisp]}:
+
+  ## me
+
+  Do you know the Story of Mac about the invention of Lisp macros?
+
+  ##.
+
+  ## gpt
+
+  The story you are referring to is known as "The Story of Mel," not "The Story of
+  Mac." It is a popular anecdote in computer programming folklore about a
+  programmer named Mel Kaye. However, the story is not related to the invention of
+  Lisp macros. Instead, it tells the tale of a real programmer, Mel Kaye, who
+  worked at the Royal McBee Computer Corporation in the late 1950s and early
+  1960s. Mel was known for his exceptional skills in programming early computers,
+  such as the LGP-30 and RPC-4000, using assembly language and writing highly
+  optimized code.
+
+  Lisp macros, on the other hand, were introduced as part of the Lisp programming
+  language, which was developed by John McCarthy. Macros are a powerful feature of
+  Lisp that allows code to generate and manipulate other code at runtime, enabling
+  metaprogramming and the creation of domain-specific languages.
+
+  While "The Story of Mel" is an entertaining and often-cited piece of programming
+  folklore, it does not discuss the invention of Lisp macros or their development.
+
+  ##.
+
+  ## me
+
+  I'm talking about "The Story of Mac: A Just-So Story" from Practical Common Lisp.
+
+  ##.
+
+  ## gpt
+
+  I apologize for the confusion in my previous response. "The Story of Mac: A
+  Just-So Story" is indeed a story from the book "Practical Common Lisp" by Peter
+  Seibel. The story serves as an allegorical explanation of how Lisp macros were
+  invented and why they are useful.
+
+  In the story, there is a tribe of programmers who speak Lisp, and among them is
+  a wise programmer named Mac. The tribe faces a problem where they need to
+  repeatedly perform similar but slightly different tasks. Instead of writing
+  separate functions for each task, Mac realizes that he can write a single
+  function that generates the required code for each task. He calls this new
+  function a "macro."
+
+  The other tribe members initially resist the idea of macros, but eventually,
+  they come to appreciate the power of macros in Lisp, allowing them to write more
+  concise, expressive, and maintainable code.
+
+  While this story is a fictional and playful explanation, it effectively conveys
+  the concept of Lisp macros and their importance in the language. Macros allow
+  Lisp code to manipulate other Lisp code, providing a powerful metaprogramming
+  capability that sets Lisp apart from many other programming languages.
+
+  ##.
+
+Feel free to read the actual “[Story of Mac]” and decide if you think that
+summary is accurate.
+
+[Practical Common Lisp] <https://gigamonkeys.com/book/>
+
+[Story of Mac] <https://gigamonkeys.com/book/macros-defining-your-own.html>
