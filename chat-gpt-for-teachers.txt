@@ -75,6 +75,10 @@ answers that are responsive the questions, etc. But there is no underlying
 other than generate probable words. Thus it can easily be tripped up by simple
 math and logic questions which you’d think a computer would be really good at.
 
+There are several examples in “[ChatGPT as a query engine on a giant corpus of
+text|query engine]” of ChatGPTs inability to do basic math and logic. Or you can
+read “[Math is hard]” wherin I try to get GPT-4 to do some math.
+
 \footer{Feedback or other questions you’d like me to try to answer? Email me [peter@gigamonkeys.com].}
 
 [ai text classifier] <https://platform.openai.com/ai-text-classifier>
@@ -86,3 +90,5 @@ math and logic questions which you’d think a computer would be really good at.
 [gpt pcl] </ai/gpt-recommends-pcl/>
 
 [peter@gigamonkeys.com] <mailto:peter@gigamonkeys.com>
+
+[math is hard] </ai/math-is-hard/>
