@@ -10,7 +10,7 @@ needs to be evaluated for credibility like any other source. And text that comes
 from GPT needs to be quoted and attributed just like anything the student did
 not write themselves.
 
-However in order to help our students to understand what that actually means, we
+However in order to help our students understand what that actually means, we
 need to help them understand what GPT and other Large Language Models (LLMs) are
 actually capable of and how they produce text via a totally different process
 than human authors.
