@@ -65,7 +65,7 @@ The really simple version is, ChatGPT is a giant function that predicts, given
 some starting text, what words are likely to come next based on what it has seen
 in the huge swaths of text from the internet that it has been trained on. It
 then picks a probable word, emits it, and uses the original text plus that new
-word as the the starting point to predict another word, and so on. This is a
+word as the starting point to predict another word, and so on. This is a
 obviously a vast oversimplification but that’s fundamentally what it’s doing.
 
 The thing that makes it seem so eerily intelligent is the sophistication of how
