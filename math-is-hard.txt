@@ -83,8 +83,8 @@ So, this time it got the sum right but 204 / 10 is definitely not 20.
 
   ##.
 
-That’s a slighly different list of numbers than the first one. This time the
-actual sum is 205, not 200. So let’s see if we can help it check it’s work:
+That’s a slightly different list of numbers than the first one. This time the
+actual sum is 205, not 200. So let’s see if we can help it check its work:
 
   ## me
 
@@ -100,7 +100,7 @@ actual sum is 205, not 200. So let’s see if we can help it check it’s work:
 
   ##.
 
-Right! Now let’s see if it can see it’s mistake.
+Right! Now let’s see if it can see its mistake.
 
   ## me
 

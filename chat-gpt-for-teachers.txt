@@ -77,7 +77,7 @@ math and logic questions which you’d think a computer would be really good at.
 
 There are several examples in “[ChatGPT as a query engine on a giant corpus of
 text|query engine]” of ChatGPTs inability to do basic math and logic. Or you can
-read “[Math is hard]” wherin I try to get GPT-4 to do some math.
+read “[Math is hard]” wherein I try to get GPT-4 to do some math.
 
 \footer{Feedback or other questions you’d like me to try to answer? Email me [peter@gigamonkeys.com].}
 
