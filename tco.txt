@@ -2,6 +2,8 @@
 
 * Tail call optimization
 
+\i{Some code reformatted to fit better on this page.}
+
   ## me
 
   Can this code be compiled with tail-call-optimizaton:
@@ -93,5 +95,42 @@
   call. In this case, you may want to refactor the code to use an iterative
   approach or use helper functions with accumulators to achieve a tail-recursive
   structure, if using a language that supports tail-call optimization.
+
+  ##.
+
+  ## me
+
+  Can you rewrite the tail-recursive change3 from before in iterative form?
+
+  ##.
+
+  ## gpt
+
+  Certainly! Here's an iterative version of the change3 function provided earlier:
+
+     const change3 = (amt, coins) => {
+       const rows = Math.max(...coins) + 1;
+       const table = Array(rows)
+         .fill()
+         .map((_, i) => Array(coins.length).fill(i === 0 ? 1 : 0));
+
+       for (let i = 1; i <= amt; i++) {
+         for (let c = 0; c < coins.length; c++) {
+           const smallerAmount =
+             i - coins[c] < 0
+               ? 0
+               : table[(i - coins[c]) % table.length][c];
+           const fewerCoins = c === 0 ? 0 : table[i % table.length][c - 1];
+           table[i % table.length][c] = smallerAmount + fewerCoins;
+         }
+       }
+
+       return table[amt % table.length][coins.length - 1];
+     };
+
+  In this version, I've replaced the recursive helper function with two nested
+  for loops. The outer loop iterates over the amounts from 1 to amt, and the
+  inner loop iterates over the coin denominations. The rest of the logic remains
+  the same as in the original version.
 
   ##.
