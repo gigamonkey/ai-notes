@@ -19,6 +19,8 @@ likely wrong.
 
   - [The Story of Mac]
 
+  - [Tail call optimization]
+
 [ChatGPT for teachers] </ai/chat-gpt-for-teachers/>
 
 [Math is hard] </ai/math-is-hard/>
@@ -28,3 +30,5 @@ likely wrong.
 [GPT reads the comics] </ai/gpt-reads-the-comics/>
 
 [The Story of Mac] </ai/story-of-mac/>
+
+[Tail call optimization] </ai/tco/>
