@@ -1,0 +1,97 @@
+-*- mode: markup; mode: smart-quote; -*-
+
+* Tail call optimization
+
+  ## me
+
+  Can this code be compiled with tail-call-optimizaton:
+
+     const change3 = (amt, coins) => {
+       const rows = Math.max(...coins) + 1;
+       const table = Array(rows)
+         .fill()
+         .map((_, i) => Array(coins.length).fill(i === 0 ? 1 : 0));
+
+       const helper = (i, c) => {
+         if (c === coins.length) {
+           if (i === amt) {
+             return table[i % table.length][c - 1];
+           } else {
+             return helper(i + 1, 0);
+           }
+         } else {
+           const smallerAmount =
+             i - coins[c] < 0
+               ? 0
+               : table[(i - coins[c]) % table.length][c];
+           const fewerCoins = c === 0 ? 0 : table[i % table.length][c - 1];
+           table[i % table.length][c] = smallerAmount + fewerCoins;
+           return helper(i, c + 1);
+         }
+       };
+
+       return helper(1, 0);
+     };
+
+  ##.
+
+  ## gpt
+
+  The provided code is written in JavaScript, which does not have guaranteed
+  tail-call optimization support across all implementations. The ECMAScript 2015
+  (ES6) specification included proper tail calls (PTC) as part of the standard,
+  but not all JavaScript engines have implemented this feature. In fact, some
+  major engines, like V8 (used in Chrome and Node.js), have opted not to
+  implement it due to concerns over performance and debugging complexity.
+
+  As a result, while the provided code may work correctly and efficiently in an
+  engine that supports tail-call optimization, there is no guarantee that it
+  will do so in all JavaScript environments.
+
+  If you need to ensure that your code can benefit from tail-call optimization,
+  consider using a language that guarantees support for this feature, such as
+  Scheme or Haskell, or use an iterative approach instead of recursion in
+  JavaScript.
+
+  ##.
+
+  ## me
+
+  Can this code be compiled with tail-call-optimization:
+
+     const change = (amt, coins) => {
+       if (amt < 0 || coins.length === 0) {
+         return 0;
+       } else if (amt === 0) {
+         return 1;
+       } else {
+         return change(amt - coins[0], coins) + change(amt, coins.slice(1));
+       }
+     };
+
+  ##.
+
+  ## gpt
+
+  As mentioned in my previous response, JavaScript does not have guaranteed
+  tail-call optimization support across all implementations. However, let's
+  analyze the provided code in terms of whether it is tail-recursive, which is a
+  prerequisite for tail-call optimization.
+
+  The provided change function is not tail-recursive because in the last return
+  statement:
+
+     return change(amt - coins[0], coins) + change(amt, coins.slice(1));
+
+  The function calls itself twice and then adds the results together. The
+  addition operation prevents the function from being tail-recursive, as the
+  function needs to store the intermediate state between the two recursive calls
+  in order to perform the addition.
+
+  For a function to be tail-recursive, the last operation in the function should
+  be the recursive call itself, with no other operations performed after the
+  call. In this case, you may want to refactor the code to use an iterative
+  approach or use helper functions with accumulators to achieve a tail-recursive
+  structure, if using a language that supports tail-call optimization.
+
+  ##.
