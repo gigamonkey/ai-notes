@@ -1,0 +1,25 @@
+-*- mode: markup; mode: smart-quote; -*-
+
+* Index of largest
+
+\i{Some code reformatted to fit better on this page.}
+
+  ## me
+
+  Can you write an expression in Javascript using the array `arr` that returns
+  the index of the largest value in `arr`?
+
+  ##.
+
+  ## gpt
+
+  Yes, you can use the following JavaScript expression to find the index of the largest value in the array arr:
+
+     const indexOfLargestValue = arr.reduce((maxIndex, currentValue, currentIndex, array) => currentValue > array[maxIndex] ? currentIndex : maxIndex, 0);
+
+  This expression uses the reduce() function on the array arr to iterate through
+  its elements and compare their values. The function keeps track of the maximum
+  value's index, updating it whenever it encounters a larger value. Finally, it
+  returns the index of the largest value in the array.
+
+  ##.

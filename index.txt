@@ -21,6 +21,8 @@ likely wrong.
 
   - [Tail call optimization]
 
+  - [Index of largest]
+
 [ChatGPT for teachers] </ai/chat-gpt-for-teachers/>
 
 [Math is hard] </ai/math-is-hard/>
@@ -32,3 +34,5 @@ likely wrong.
 [The Story of Mac] </ai/story-of-mac/>
 
 [Tail call optimization] </ai/tco/>
+
+[Index of largest] </ai/index-of-largest/>
