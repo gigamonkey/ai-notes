@@ -2,6 +2,13 @@
 
 * Index of largest
 
+A friend of mine [asked GPT] about finding the index of the lagest element of an
+array. His question, “How do I find the index of the largest element in an array
+using javascript?” and a follow up, “Is there an easier way?” got two pretty
+normal Javascript solutions, one using a `for` loop and one using `Math.max` and
+`indexOf`. Because I’m a big nerd I couldn’t help writing my own verison using
+`reduce`. Then it occurred to me to see if GPT could come up with my solution.
+
 \i{Some code reformatted to fit better on this page.}
 
   ## me
@@ -23,3 +30,115 @@
   returns the index of the largest value in the array.
 
   ##.
+
+That is almost identical (modulo variable names) to what I wrote. Boom. But I
+realized that this solution doesn’t handle an empty array properly. So I tried
+to get GPT to fix it.
+
+  ## me
+
+  Can you fix that so if `arr` is empty it returns -1?
+
+  ##.
+
+  ## gpt
+
+  Certainly! You can modify the expression to check if the arr is empty and
+  return -1 in that case:
+
+     const indexOfLargestValue = arr.length === 0 ? -1 : arr.reduce((maxIndex, currentValue, currentIndex, array) => currentValue > array[maxIndex] ? currentIndex : maxIndex, 0);
+
+  This expression uses a ternary operator to check if the length of arr is 0,
+  meaning it's empty. If it is empty, the expression returns -1; otherwise, it
+  proceeds with the reduce() function to find the index of the largest value in
+  the array.
+
+  ##.
+
+That’s pretty good. I love the ternary operator so I might actually write
+something like this. But it’s kinda a cheat when you can do it all within the
+`reduce`. One more try.
+
+  ## me
+
+  Can you do it all with in the reduce, i.e. without the ternary operator?
+
+  ##.
+
+  ## gpt
+
+  Sure, you can adjust the reduce() function to handle empty arrays by providing
+  an initial value to the accumulator argument. This initial value will be an
+  object containing the index and value, which allows you to return -1 if the
+  array is empty:
+
+     const indexOfLargestValue = arr.reduce((maxObj, currentValue, currentIndex) => {
+       if (maxObj.value === null || currentValue > maxObj.value) {
+         return { index: currentIndex, value: currentValue };
+       } else {
+         return maxObj;
+       }
+     }, { index: -1, value: null }).index;
+
+  This expression uses the reduce() function with an initial value for the
+  accumulator that has an index of -1 and a value of null. The function iterates
+  through the elements of the array, updating the index and value in the
+  accumulator object whenever it encounters a larger value. If the array is
+  empty, the initial accumulator value with an index of -1 will be returned.
+  Finally, the .index property of the accumulator object is returned as the
+  result.
+
+  ##.
+
+Ew. I don’t like that. It works, but yuck. So I asked GPT about my solution.
+
+  ## me
+
+  I like this one better:
+
+     arr.reduce((m, n, i) => n > (arr[m] ?? -Infinity) ? i : m, -1)
+
+  Do you understand it?
+
+  ##.
+
+  ## gpt
+
+  Yes, I understand this expression, and it's a nice, concise way to solve the
+  problem. Here's a breakdown of how it works:
+
+     arr.reduce((m, n, i) => n > (arr[m] ?? -Infinity) ? i : m, -1)
+
+
+    # The reduce() function is called on the arr array, taking two arguments: a
+      callback function and an initial accumulator value -1.
+
+    # The callback function has three parameters: m, n, and i. m is the
+      accumulator that stores the current maximum index, n is the current
+      element value in the iteration, and i is the current element index.
+
+    # Inside the callback function, the expression (arr\[m\] ?? -Infinity)
+      retrieves the value at the current maximum index m in arr. If m is -1
+      (i.e., the array is empty or the initial accumulator value), the nullish
+      coalescing operator (??) returns -Infinity.
+
+    # The expression n > (arr\[m\] ?? -Infinity) compares the current element
+      value n with the value at the maximum index or -Infinity if the array is
+      empty.
+
+    # If n is greater than the compared value, the ternary operator ? returns
+      the current index i as the new maximum index. Otherwise, it returns the
+      current maximum index m.
+
+    # After iterating through all elements in the array, the reduce() function
+      returns the index of the largest value or -1 if the array is empty.
+
+  This expression elegantly handles empty arrays and efficiently finds the index
+  of the largest value in the array.
+
+  ##.
+
+A little flattery plus a good breakdown of how the code works. What more could
+we ask for?
+
+[asked GPT] <https://shareg.pt/3p4eXAP>
