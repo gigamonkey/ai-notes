@@ -9,8 +9,6 @@ normal Javascript solutions, one using a `for` loop and one using `Math.max` and
 `indexOf`. Because I’m a big nerd I couldn’t help writing my own verison using
 `reduce`. Then it occurred to me to see if GPT could come up with my solution.
 
-\i{Some code reformatted to fit better on this page.}
-
   ## me
 
   Can you write an expression in Javascript using the array `arr` that returns
