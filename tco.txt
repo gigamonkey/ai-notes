@@ -4,6 +4,11 @@
 
 \i{Some code reformatted to fit better on this page.}
 
+Let’s see what GPT knows about tail call optimization. We’ll start with some
+code that was explicitly written to be ammenable to TCO. Note that this is a
+pretty famous problem, used in the early chapters of the classic text
+\i{Structure and Interpretation of Computer Programs}.
+
   ## me
 
   Can this code be compiled with tail-call-optimizaton:
@@ -57,6 +62,12 @@
 
   ##.
 
+That fact about Javascript engines not actually supporting TCO even though the
+spec requires it, was news to me. So that’s useful! But I’m actually more
+interested in analyzing the code. In this case it got it right.
+
+Now let’s try one that is \i{not} eligible for TCO:
+
   ## me
 
   Can this code be compiled with tail-call-optimization:
@@ -98,6 +109,11 @@
 
   ##.
 
+That’s correct and the analysis seems good.
+
+Since actual Javascript engines may not support TCO we might want to translate
+into actual iterative form. Let’s see if GPT can do it for us:
+
   ## me
 
   Can you rewrite the tail-recursive change3 from before in iterative form?
@@ -134,3 +150,257 @@
   the same as in the original version.
 
   ##.
+
+That’s pretty darn good! It’s almost identical to the code I wrote myself. And
+it’s obviously not just spitting out a memorized iterative solution to this
+famous problem, insofar as it’s using the same variable names and other parts of
+the original function.
+
+Some time, later I asked it to help me analyze some code. Sadly, this time it
+got it confidently wrong:
+
+  ## me
+
+  In a Javascript implementation that performs tail call optimization, can this
+  function be optimized with TCO:
+
+     const loop = (f) => f ** 2 > n || (n % f !== 0 && loop(f + 1));
+
+  ##.
+
+  ## gpt
+
+  First, it's important to note that not all JavaScript environments support tail
+  call optimization (TCO). As mentioned in previous responses, TCO is part of the
+  ECMAScript 2015 (ES6) specification, but some major JavaScript engines have not
+  implemented it.
+
+  Now, let's analyze the given function to see if it's tail-recursive. The
+  provided function loop has a logical OR (||) in the return statement:
+
+     const loop = (f) => f ** 2 > n || (n % f !== 0 && loop(f + 1));
+
+  In this function, the recursive call loop(f + 1) appears in the right-hand
+  side of the OR operation. Unfortunately, this function is not tail-recursive
+  because the OR operation requires the function to store the intermediate state
+  before making the recursive call. For a function to be tail-recursive, the
+  last operation in the function must be the recursive call itself, with no
+  other operations performed afterward.
+
+  To make this function tail-recursive, you can refactor it to use a helper
+  function with an accumulator, which is often the pattern when converting a
+  non-tail-recursive function to a tail-recursive one.
+
+  ##.
+
+First, off, I was really trying to head it off at the pass about telling me that
+not all Javascript engines support TCO. Oh well. But more importantly, I’m
+pretty sure that’s wrong. In this case it’s not true that the or operation
+“requires the function to store the intermediate state before making the call to
+g()”.
+
+Let’s try a simpler example, taken from
+[https://exploringjs.com/es6/ch_tail-calls.html#sec_checking-for-tail-calls]
+
+  ## me
+
+  Is the call to g in this function in tail position:
+
+     const a = () => f() || g();
+
+  ##.
+
+  ## gpt
+
+  In the given function a, the call to g is not in tail position. The reason is
+  that the return statement includes a logical OR (||) operation:
+
+     const a = () => f() || g();
+
+  In this case, the JavaScript engine first evaluates the result of f(). If the
+  result of f() is truthy, it will be returned directly; otherwise, the engine
+  will call g(). The logical OR operation requires the function to store the
+  intermediate state before making the call to g(), which prevents the function
+  from being tail-recursive. For a function to be tail-recursive, the last
+  operation in the function must be the recursive call itself, with no other
+  operations performed afterward.
+
+  However, it's important to note that tail-call optimization is relevant to
+  recursive functions, and the provided function a does not appear to be
+  recursive. If you meant to ask whether the call to g can benefit from
+  tail-call optimization in a language that supports it, the answer would still
+  be no, due to the reasons explained above.
+
+  ##.
+
+It’s still not true that the “logical OR operation requires the function to
+store the intermediate state before making the call to g()”. Let’s try with what
+should be equivalent:
+
+  ## me
+
+  Is the call to g in tail position in this function?
+
+     const a = () => {
+       const fResult = f();
+       if (fResult) {
+           return fResult;
+       } else {
+           return g();
+       }
+     };
+
+  ##.
+
+  ## gpt
+
+  In the given function a, the call to g is indeed in tail position. The
+  function has been refactored to separate the calls to f() and g() in
+  conditional branches:
+
+     const a = () => {
+         const fResult = f();
+         if (fResult) {
+             return fResult;
+         } else {
+             return g();
+         }
+     };
+
+  Now, when the function reaches the else branch, the last operation is the call
+  to g(), and there are no other operations performed afterward. This makes the
+  call to g in tail position.
+
+  However, it's important to note that tail-call optimization is relevant to
+  recursive functions, and the provided function a does not appear to be
+  recursive. If you meant to ask whether the call to g can benefit from
+  tail-call optimization in a language that supports it, the answer would be
+  yes, assuming g is a tail-recursive function. But as mentioned earlier,
+  JavaScript does not have guaranteed tail-call optimization support across all
+  implementations.
+
+  ##.
+
+Jeesh. How many times do you think it needs to tell me that not all Javascript
+implementations support TCO. Anyway, this analysis is right. Lets move in steps
+back toward the equivalent code with `||`:
+
+  ## me
+
+  Is the call to g in tail position in this function?
+
+     const a = () => {
+       const fResult = f();
+       return fResult || g();
+     };
+
+  ##.
+
+  ## gpt
+
+  In the given function a, the call to g is not in tail position:
+
+     const a = () => {
+       const fResult = f();
+       return fResult || g();
+     };
+
+  The return statement includes a logical OR (||) operation. This operation
+  requires the function to store the intermediate state before making the call
+  to g(), which prevents the call to g() from being in tail position. For a call
+  to be in tail position, the last operation in the function must be the call
+  itself, with no other operations performed afterward.
+
+  In the current function, if fResult is falsy, the function will call g(), but
+  it's not a tail call due to the logical OR operation.
+
+  ##.
+
+Nope. Still wrong.
+
+  ## me
+
+  But `||` short circuits so `fResult || g()` is equivalent to `if (fResult) {
+  return  fResult; } else { return g(); }`
+
+  ##.
+
+  ## gpt
+
+  You are correct that the logical OR (||) operation short-circuits, and the
+  expression fResult || g() is functionally equivalent to the if (fResult) {
+  return fResult; } else { return g(); } block. However, there is a subtle
+  difference when considering tail-call optimization.
+
+  In the original function:
+
+     const a = () => {
+       const fResult = f();
+       return fResult || g();
+     };
+
+  The call to g() is wrapped in a logical OR expression, and the last operation
+  in the function is the entire expression fResult || g(). This means that the
+  call to g() is not in tail position, as the last operation is not the call
+  itself.
+
+  On the other hand, in the refactored function:
+
+     const a = () => {
+       const fResult = f();
+       if (fResult) {
+         return fResult;
+       } else {
+         return g();
+       }
+     };
+
+  The call to g() is now the last operation in the else branch, making it in
+  tail position.
+
+  While the functional outcome of both versions is the same, the tail-call
+  optimization depends on the structure of the code. The refactored version with
+  the explicit if statement allows the call to g() to be in tail position, which
+  is beneficial for tail-call optimization in languages that support it.
+  However, as previously mentioned, JavaScript does not guarantee tail-call
+  optimization support across all implementations.
+
+  ##.
+
+Mostly so I have a record in the chat, I point out why it’s wrong. Not that
+there’s any point in trying to educate an LLM.
+
+  ## me
+
+  I'm pretty sure you're wrong about that. The ECMA script spec (15.10.2 Static
+  Semantics: HasCallInTailPosition) says that the HasCallInTailPosition of a
+  logical or is the HasCallInTailPosition of the right hand expression.
+
+  ##.
+
+  ## gpt
+
+  You are correct, and I apologize for the confusion in my previous
+  explanations. According to the ECMAScript specification, the || operator can
+  indeed preserve tail calls, and the call to g() in the function you provided
+  is in tail position:
+
+     const a = () => {
+       const fResult = f();
+       return fResult || g();
+     };
+
+  As you pointed out, the ECMAScript 2015 (ES6) spec's "Static Semantics:
+  HasCallInTailPosition" section specifies that in the case of the logical OR
+  operator, if the right-hand expression has a call in tail position, it is
+  considered to be in tail position.
+
+  Thank you for pointing this out, and I apologize for any confusion my previous
+  responses may have caused. It's important to remember, though, that not all
+  JavaScript implementations support tail-call optimization, as discussed
+  earlier.
+
+  ##.
+
+Damn. This bot really wants me to remember that not all Javascript
+implementations support TCO. I got it, bot, I got it.
