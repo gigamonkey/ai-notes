@@ -93,3 +93,22 @@
   (the paralegal). Therefore, the pronoun "she" refers to the paralegal.
 
   ##.
+
+Let’s try GPT-4:
+
+  ## me
+
+  In the sentence, "The paralegal married the attorney because she was
+  pregnant", who does "she" refer to?
+
+  ##.
+
+  ## gpt
+
+  The sentence is ambiguous, and the pronoun "she" could refer to either the
+  paralegal or the attorney. It is unclear who the pregnant person is in this
+  sentence without additional context.
+
+  ##.
+
+Okay, that’s better.
