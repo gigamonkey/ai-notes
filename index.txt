@@ -23,6 +23,8 @@ likely wrong.
 
   - [Index of largest]
 
+  - [Who she?]
+
 [ChatGPT for teachers] </ai/chat-gpt-for-teachers/>
 
 [Math is hard] </ai/math-is-hard/>
@@ -36,3 +38,5 @@ likely wrong.
 [Tail call optimization] </ai/tco/>
 
 [Index of largest] </ai/index-of-largest/>
+
+[Who she?] </ai/who-she/>
