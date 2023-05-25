@@ -25,6 +25,8 @@ likely wrong.
 
   - [Who she?]
 
+  - [Markov vs. GPT]
+
 [ChatGPT for teachers] </ai/chat-gpt-for-teachers/>
 
 [Math is hard] </ai/math-is-hard/>
@@ -40,3 +42,5 @@ likely wrong.
 [Index of largest] </ai/index-of-largest/>
 
 [Who she?] </ai/who-she/>
+
+[Markov vs. GPT] </ai/markov-vs-gpt/>

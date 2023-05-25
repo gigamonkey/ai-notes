@@ -1,0 +1,80 @@
+-*- mode: markup; mode: smart-quote; -*-
+
+* Markov vs. GPT
+
+  ## me
+
+  Can you please describe how your implementation differs from, and is similar
+  to, a program that generates text with a Markov Chain?
+
+  ##.
+
+  ## oldgpt
+
+  Yes, of course!
+
+  A Markov Chain is a mathematical system that undergoes transitions from one
+  state to another according to certain probabilistic rules. In the context of
+  text generation, a Markov Chain can be used to model the probability of seeing a
+  certain word (or character) given the previous word (or character). Then, the
+  text generator can use the model to randomly sample a sequence of words (or
+  characters) that approximate the statistical patterns of the training data.
+
+  There are a few key differences between my implementation and a program that
+  generates text using a Markov Chain:
+
+    - Scale: My implementation is a very large language model called GPT-3 (short
+      for "Generative Pre-trained Transformer 3"), which was trained on a dataset
+      of billions of words. By contrast, a Markov Chain text generator is usually
+      much smaller and simpler, as it only needs to store the statistical
+      information about the training data, rather than actually understanding the
+      meaning of the words.
+
+    - Capabilities: Because of its size and the advanced techniques it uses, GPT-3
+      is able to generate human-like text that is much more diverse and coherent
+      than what a Markov Chain text generator can produce. GPT-3 can also perform
+      a wide range of language tasks, such as translation, summarization, and
+      question answering, which are beyond the capabilities of a simple Markov
+      Chain.
+
+    - Training: GPT-3 was trained using a method called "unsupervised learning",
+      which means that it learned to generate text by simply predicting the next
+      word in a given sequence, without being explicitly told what the correct
+      next word should be. A Markov Chain text generator, on the other hand, is
+      usually trained in a more supervised way, by being explicitly fed a large
+      dataset of pre-written text and learning to reproduce it.
+
+  Despite these differences, there are also some similarities between my
+  implementation and a Markov Chain text generator. Both use statistical patterns
+  in the training data to generate text, and both can produce text that is similar
+  to the training data in terms of style and content. However, GPT-3 is able to do
+  this much more effectively and flexibly than a Markov Chain, thanks to its large
+  size and advanced techniques.
+
+  ##.
+
+  ## me
+
+  In what sense do you "actually understand the meaning of the words"?
+
+  ##.
+
+  ## oldgpt
+
+  As a large language model, I have been trained to predict the next word
+  in a given sequence of words (a task known as language modeling). To do this
+  effectively, I have learned to understand the meaning of words and how they are
+  used in context. This allows me to generate text that is coherent and makes
+  sense to a human reader.
+
+  For example, if I am given the prompt "The cat sat on the" and asked to predict
+  the next word, I would know that a good choice would be "mat", because it is a
+  common noun that fits grammatically and semantically in that context. I would be
+  less likely to choose a word like "banana" or "elephant", because they are less
+  plausible in that context.
+
+  In this way, I am able to use my understanding of language and context to
+  generate text that is more human-like and coherent than what a simple
+  statistical model like a Markov Chain could produce.
+
+  ##.
