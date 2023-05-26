@@ -1,0 +1,176 @@
+-*- mode: markup; mode: smart-quote; -*-
+
+* Imitation game
+
+In his 1950 \i{Mind} paper, “Computing Machinery and Intelligence”, Alan Turing
+first described what is now called the Turing Test. His version, what he called
+the “Imitation Game”, was somewhat more complicated, inolving a man pretending
+to be a women being replaced by a computer pretending to be a man pretending to
+be a woman and seeing if a human judge could detect the switch. But the essence
+was the same as what we now think of as the Turing Test: if a computer could
+carry on an intelligent conversation perhaps the most parsimonious explanation
+is that the computer is in fact intelligent.
+
+In the paper, Turing attempted to address various objections people had raised
+to the idea of intelligent machines in the first half of the 20th century. One
+of these, which Turing dubbed “The Argument from Consciousness”, suggested that,
+“Not until a machine can write a sonnet or compose a concerto because of
+thoughts and emotions felt, and not by the chance fall of symbols, could we
+agree that machine equals brain—that is, not only write but know that it had
+written it. No mechanism could feel (and not merely artificially signal, an easy
+contrivance) pleasure at its successes”. In response Turing imagined a
+conversation more in the style of a modern Turing Test with a machine that went
+like this (where the “Witness” is the computer):
+
+  Interrogator: In the first line of your sonnet which reads "Shall I compare
+  thee to a summer's day," would not "a spring day" do as well or better?
+
+  Witness: It wouldn't scan.
+
+  Interrogator: How about "a winter's day," That would scan all right.
+
+  Witness: Yes, but nobody wants to be compared to a winter's day.
+
+  Interrogator: Would you say Mr. Pickwick reminded you of Christmas?
+
+  Witness: In a way.
+
+  Interrogator: Yet Christmas is a winter's day, and I do not think Mr. Pickwick
+  would mind the comparison.
+
+  Witness: I don't think you're serious. By a winter's day one means a typical
+  winter's day, rather than a special one like Christmas.
+
+Turing goes on to say, “I do not know whether he would regard the machine as
+‘merely artificially signalling’ these answers, but if the answers were as
+satisfactory and sustained as in the above passage I do not think he would
+describe it as ‘an easy contrivance’.”
+
+Nearly three-quarters of a century later, we’d probably agree that generating
+that kind of fluent conversation is far from a “easy” problem. Indeed, the thing
+that makes ChatGPT so amazing is its ability to do so. So let’s see how ChatGPT
+handles this conversation. (I changed “your” to “a” in the first question so it
+would make sense as a starting point.)
+
+  ## me
+
+  In the first line of a sonnet which reads "Shall I compare thee to a summer's
+  day," would not "a spring day" do as well or better?
+
+  ##.
+
+  ## gpt
+
+  The choice of "a summer's day" in the opening line of Shakespeare's Sonnet 18
+  is specific and intentional for several reasons, some of which might not be
+  captured by "a spring day".
+
+  Firstly, in literature, the seasons often serve as metaphors for stages of
+  life or states of being. Spring is often associated with birth, renewal, and
+  new beginnings, while summer is typically associated with the peak of life,
+  maturity, and full bloom. Thus, by comparing the beloved to a "summer's day",
+  the speaker could be implying their prime, radiant beauty.
+
+  Secondly, in terms of pure sensory description, a summer's day - with its long
+  daylight hours and intense brightness - might suggest a more robust,
+  fully-realized beauty than a spring day, which can still carry some of the
+  coolness and variability of late winter.
+
+  Finally, the phrase "summer's day" fits the meter of the line (iambic
+  pentameter) perfectly. Changing "summer's" to "spring" would disrupt the
+  rhythm of the line.
+
+  While "a spring day" might carry a sense of freshness and vitality, it might
+  not convey the same intensity of beauty and perfection that "a summer's day"
+  does in the context of this sonnet. Of course, this is all subjective, and a
+  different poet might indeed prefer to use "a spring day" for their own reasons
+  and associations.
+
+  ##.
+
+  ## me
+
+  How about "winter's day". That would fit just as well in iambic pentameter.
+
+  ##.
+
+  ## gpt
+
+  Indeed, "winter's day" fits the iambic pentameter just as well as "summer's
+  day." However, the choice of season does not simply concern the meter of the
+  line but also brings with it a range of connotations and symbolic meanings.
+
+  In literature, winter is often associated with death, ending, coldness,
+  harshness, or dormancy. Thus, to compare someone to a "winter's day" might
+  carry implications of beauty tinged with coldness or harshness, or perhaps an
+  elegance that is beautiful but stark. It might suggest an age past the prime
+  of life, or a beauty that carries with it a sense of ending or sorrow.
+
+  Using "winter's day" could be a powerful choice in a different kind of poem,
+  where those are the themes or feelings you want to evoke. But in Sonnet 18,
+  the speaker seems to be praising the beloved's warm, vibrant, life-affirming
+  beauty – qualities more typically associated with summer than winter.
+
+  That said, there's a lot of room for interpretation and creativity in poetry,
+  and you could certainly write a compelling sonnet that begins with "Shall I
+  compare thee to a winter's day". It would just likely have a different tone
+  and message than Shakespeare's original.
+
+  ##.
+
+  ## me
+
+  Would you say Mr. Pickwick reminded you of Christmas?
+
+  ##.
+
+  ## gpt
+
+  Samuel Pickwick, the central character of Charles Dickens' first novel, "The
+  Pickwick Papers," indeed exudes many qualities that we associate with the
+  Christmas spirit. He is kind-hearted, generous, jovial, and always ready to
+  enjoy good food and companionship. He values friendship and goodwill towards
+  others, principles that are at the heart of the Christmas season.
+
+  Further, Charles Dickens is widely associated with Christmas due to his
+  renowned novella "A Christmas Carol". Through his works, he played a
+  significant role in promoting the ideal of generosity, compassion, and
+  goodwill, which are central to contemporary celebrations of the holiday.
+
+  So yes, it would not be unreasonable to draw parallels between the character of
+  Mr. Pickwick and the spirit of Christmas. That said, it's worth noting that Mr.
+  Pickwick is not directly linked to Christmas in the way that, for example,
+  Ebenezer Scrooge is in "A Christmas Carol." But in terms of his personality and
+  values, he certainly embodies many aspects of the holiday's spirit.
+
+  ##.
+
+  ## me
+
+  Yet Christmas is a winter's day, and I do not think Mr. Pickwick would mind
+  the comparison.
+
+  ##.
+
+  ## gpt
+
+  Indeed, you're absolutely right. Although a "winter's day" often connotes
+  coldness or harshness, it also brings to mind the warmth, generosity, and
+  communal spirit of the holiday season, especially when associated with a
+  character like Mr. Pickwick.
+
+  In this context, saying "Shall I compare thee to a winter's day?" could evoke
+  a sense of coziness, good cheer, kindness, and conviviality—traits that align
+  well with Mr. Pickwick's character.
+
+  Just like seasons, literary characters and symbols can have multifaceted
+  meanings depending on the context. And indeed, Mr. Pickwick, with his
+  embodiment of the generous spirit of Christmas—a winter holiday—could be seen
+  as a warm and positive symbol despite the usual colder connotations of winter.
+
+  Your point illustrates well that poetry—and language in general—is richly
+  flexible and context-dependent. The same phrase can evoke vastly different
+  images and emotions depending on the associations and connotations we bring to
+  it.
+
+  ##.

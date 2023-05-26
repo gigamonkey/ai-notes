@@ -49,6 +49,11 @@ div.epigram {
 
 blockquote {
   margin: 2em 1.5em;
+  font-size: 0.9rem;
+}
+
+blockquote div {
+  font-size: 1rem;
 }
 
 blockquote > div {
