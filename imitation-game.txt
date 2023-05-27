@@ -3,13 +3,13 @@
 * Imitation game
 
 In his 1950 \i{Mind} paper, “Computing Machinery and Intelligence”, Alan Turing
-first described what is now called the Turing Test. His version, what he called
-the “Imitation Game”, was somewhat more complicated, inolving a man pretending
-to be a women being replaced by a computer pretending to be a man pretending to
-be a woman and seeing if a human judge could detect the switch. But the essence
-was the same as what we now think of as the Turing Test: if a computer could
-carry on an intelligent conversation perhaps the most parsimonious explanation
-is that the computer is in fact intelligent.
+first described what is now called the Turing Test. His version, which he called
+the Imitation Game, was somewhat more complicated than the modern version,
+inolving a man pretending to be a women being replaced by a computer pretending
+to be a man pretending to be a woman and seeing if a human judge could detect
+the switch. But the essence was the same: if a computer could carry on an
+intelligent conversation perhaps the most parsimonious explanation is that the
+computer is in fact intelligent.
 
 In the paper, Turing attempted to address various objections people had raised
 to the idea of intelligent machines in the first half of the 20th century. One
@@ -46,11 +46,11 @@ Turing goes on to say, “I do not know whether he would regard the machine as
 satisfactory and sustained as in the above passage I do not think he would
 describe it as ‘an easy contrivance’.”
 
-Nearly three-quarters of a century later, we’d probably agree that generating
-that kind of fluent conversation is far from a “easy” problem. Indeed, the thing
-that makes ChatGPT so amazing is its ability to do so. So let’s see how ChatGPT
-handles this conversation. (I changed “your” to “a” in the first question so it
-would make sense as a starting point.)
+I was reminded of this conversation by the book \i{Common Sense, the Turing
+Test, and the Quest for Real AI} by Hector J. Levesque. Professor Levesque,
+writing in 2017, quotes the convesation and says, “We are, of course, very far
+away from a computer program that can carry on a conversation like this.” Let’s
+see of ChatGPT does in 2023 with a similar conversation:
 
   ## me
 
