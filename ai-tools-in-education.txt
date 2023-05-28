@@ -56,7 +56,7 @@ to evolve.
 
 ** tl;dr?
 
-Just for grins, I asked ChatGPT to summarize the above text:
+Just for grins, I [asked ChatGPT to summarize the above text]:
 
   ## gpt
 
@@ -81,3 +81,6 @@ Just for grins, I asked ChatGPT to summarize the above text:
   workers, and leaders in a world where these tools are prevalent.
 
   ##.
+
+
+[asked ChatGPT to summarize the above text] <https://chat.openai.com/share/3a2579cd-038e-418f-ae33-a9c1e26e355f>
