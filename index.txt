@@ -29,6 +29,8 @@ likely wrong.
 
   - [Imitation Game]
 
+  - [AI tools in education]
+
 [ChatGPT for teachers] </ai/chat-gpt-for-teachers/>
 
 [Math is hard] </ai/math-is-hard/>
@@ -48,3 +50,5 @@ likely wrong.
 [Markov vs. GPT] </ai/markov-vs-gpt/>
 
 [Imitation Game] </ai/imitation-game/>
+
+[AI tools in education] </ai/ai-tools-in-education/>

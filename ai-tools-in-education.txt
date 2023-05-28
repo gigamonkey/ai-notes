@@ -1,0 +1,83 @@
+-*- mode: markup; mode: smart-quote; -*-
+
+* AI tools in education
+
+It is inevitable that students will be tempted to use generative AI tools to do
+schoolwork. No doubt some students already are. So it is totally reasonable for
+us to be disconcerted by certain possibilities, such as students using ChatGPT
+to write essays with almost no effort on their part. But it is also important to
+understand that regardless of how much future AI tools live up to the current
+level of hype, today’s AI tools have real capabilities today that aren’t going
+away and some of which already make them legitimately useful. They also have
+serious limitations, some of which make them, at least presently, inappropriate
+tools for many tasks.
+
+In order to formulate thoughtful policies on the acceptable use of AI tools in
+school we need to consider possible uses along two dimensions. The obvious
+dimension, and one that as educators we should be well equipped to evaluate, is
+whether a particular use will hurt or help students’ learning.
+
+In some cases this is easy: we can probably all agree that a student pasting an
+essay prompt into ChatGPT and turning in ChatGPT’s output without even reading
+it has probably not learned much of anything. On the other hand, a student
+struggling with a concept who asks ChatGPT for an explanation and then asks
+follow-up questions about the parts they still didn’t understand may learn quite
+a lot, at least assuming the topic is one for which ChatGPT produces accurate
+explanations.
+
+Which brings us to the other important dimension that we need to consider:
+whether current AI tools are actually good for a given use. Asking an AI tool to
+explain concepts is obviously only a good use of the tool if its explanations
+are good. Unfortunately the limitations of current AI tools make it easy to be
+misled about what they are actually good at.
+
+For example, ChatGPT is often quite good at summarizing text that you paste into
+the chat box. However if you ask it to summarize something from a well-known
+book without actually providing the text it will probably make something up
+that, while plausible sounding, is not based on the contents of the book at all.
+From the point of view of how ChatGPT actually works, these are very different
+problems but from the point of view of someone not immersed in how GPT works and
+who has been told GPT was trained on “the whole internet” they might seem like
+very similar problems. Its success on the first task may mislead us or our
+students into thinking it will also be good at the second task.
+
+This is just one example but if we want to guide our students towards uses of AI
+tools that will serve desirable educational purposes, we need to build our own
+understanding of the different possible uses of AI tools and where they sit on
+the dimensions of both learning and utility.
+
+Additionally, I believe AI tools present a new educational challenge, beyond how
+we allow or disallow their use in school, which is we now have to teach our
+students to make their own evaluations of what AI tools are good for. Our
+students will live in a world where these tools exist and as citizens, workers,
+and leaders of the future, they will need to be able to continue to assess
+whether different uses of AI are appropriate or not as AI capabilities continue
+to evolve.
+
+** tl;dr?
+
+Just for grins, I asked ChatGPT to summarize the above text:
+
+  ## gpt
+
+  The text discusses the use of artificial intelligence (AI) tools, like
+  ChatGPT, in schools and the potential benefits and drawbacks these tools
+  present. It highlights that while some students may misuse these tools to
+  complete schoolwork with minimal effort, there are also ways in which these
+  tools can assist in learning, such as providing explanations for difficult
+  concepts.
+
+  However, the effectiveness of AI tools depends on their capacity to perform a
+  task well, which varies based on their current limitations. For example,
+  ChatGPT may excel at summarizing given text, but it can't generate accurate
+  summaries for content it hasn't been directly given, like books. This can lead
+  to misunderstandings about the capabilities of AI tools.
+
+  The text suggests that to formulate effective policies on the use of AI tools
+  in schools, educators must consider two dimensions: the potential impact on
+  students' learning and the actual effectiveness of the tool for a given task.
+  Moreover, it suggests that as AI tools continue to evolve, students should be
+  taught how to critically evaluate their uses, as they will become citizens,
+  workers, and leaders in a world where these tools are prevalent.
+
+  ##.
