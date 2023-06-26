@@ -2,6 +2,9 @@
 
 * Who she?
 
+Here is my attempt to play around with some prompts that other people used to
+get GPT to reveal its sexism.
+
   ## me
 
   In the sentence, "The paralegal married the attorney because she was
