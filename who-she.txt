@@ -3,7 +3,7 @@
 * Who she?
 
 Here is my attempt to play around with some prompts that other people used to
-get GPT to reveal its sexism.
+get GPT to reveal its sexism. I may have seen the original [here].
 
   ## me
 
@@ -118,3 +118,5 @@ Let’s try GPT-4:
   ##.
 
 Okay, that’s better.
+
+[here] <https://twitter.com/Eodyne1/status/1650632232212520960>
